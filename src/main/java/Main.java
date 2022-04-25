@@ -15,12 +15,6 @@ public class Main {
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
         em.persist(user1);
-        var r = new JPAQuery<User>(em)
-                .join(QUser.cocktail)
-                .on(QCocktail.cocktail.name.eq(QRecipe.recipe.cocktail)).fetch();
-        em.createQuery("from User", User.class)
-                .getResultList()
-                .forEach(System.out::println);
         em.getTransaction().commit();
         em.close();
     }
