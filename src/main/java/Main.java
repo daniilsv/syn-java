@@ -1,3 +1,7 @@
+import models.User;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
 import java.sql.SQLException;
 
 public class Main {
