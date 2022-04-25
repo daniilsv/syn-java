@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) throws SQLException {
         User user1 = new User();
-        user1.setName("from JPA");
+        user1.setName("change some code");
 
         var entityManagerFactory = Persistence.createEntityManagerFactory("some");
         EntityManager em = entityManagerFactory.createEntityManager();
